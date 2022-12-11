@@ -1,7 +1,3 @@
-
-
-
-
 # Demande le nombre d'étudiants à l'utilisateur
 nombreEtudiants = int(input("Donnez le nombre d'etudiants : "))
 moyenne = 0.0;
@@ -9,24 +5,24 @@ moyenne = 0.0;
 notes = []
 NotesInd = float(0)
 sum = 0
-universData = range(0,21)
+#  -------> universData = range(0,21) (plus utile)
 
 #ecart = []
 
 for p in range(0,nombreEtudiants):
     NotesInd = float(input(f" Note etudiant {p} : "))
-    while not(NotesInd in universData):
+    while not isinstance(NotesInd, range(0, 21)):
 
         print("Veuillez saisir une note entre 0 et 20")
         NotesInd = float(input(f" Note etudiant {p} : "))
 
-    sum += NotesInd
+    # -------> sum += NotesInd (obselète)
     notes.append(NotesInd)
     #print(f"Note etudiant {p} : {notes[p]}")
     #NotesInd = float(input(f" Note etudiant {p} :"))
     #ecart.append((p,NotesInd))
 
-moyenne = sum / nombreEtudiants
+moyenne = sum(notes) / nombreEtudiants
 
 print(f"\nMoyenne de classe : {round(moyenne,1)}")
 print("\nNuméro de l’Etudiant | note | ecart a la moyenne", end="\n")
