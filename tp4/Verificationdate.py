@@ -12,9 +12,9 @@ def check(jour, mois, annee, date, bis = False):
 def catcherror():
 	date = input("Veuillez rentrer la date sous la forme jjmmaaaa : ")
 
-	mois = int(date[2:3])
-	jour = int(date[0:1])
-	annee = int(date[4:7])
+	mois = int(date[2:4])
+	jour = int(date[0:2])
+	annee = int(date[4:8])
 
 	check(jour, mois, annee, date)
 
