@@ -1,3 +1,21 @@
+"""
+l'opérateur // est vachement utile dans cet exemple car il prend en compte uniquement la partie entière de la division , 
+l'opérateur % lui prend le reste 
+
+exemple 624 :
+
+624 // 100 - > 6
+reste = 624 % 100 = 624 - (6.xxx * 100) = 70
+etc.
+
+
+
+
+"""
+
+
+
+
 def calculer_billets(montant):
     billets_100 = montant // 100
     reste = montant % 100
